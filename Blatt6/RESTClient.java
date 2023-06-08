@@ -19,9 +19,12 @@ public class RESTClient {
         // invocationBuilder = target.request(MediaType.TEXT_XML);
         invocationBuilder = target.request(MediaType.APPLICATION_JSON);
         Response response = invocationBuilder.get();
+        
         System.out.println(response.getStatus());
-        System.out.println(response.readEntity(String.class));
-		// Passenger p = response.readEntity(Passenger.class);
-		// p.print();
+        // System.out.println(response.readEntity(String.class));
+		Passenger p = response.readEntity(Passenger.class);
+		p.print();
+        
+
     }
 }

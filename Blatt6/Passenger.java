@@ -1,12 +1,8 @@
-import javax.json.bind.annotation.JsonbProperty;
-
-class Passenger{
-    @JsonbProperty("name")
-    private String name;
-    @JsonbProperty("seat")
-    private String seat;
-    @JsonbProperty("meal")
-    private String meal;
+public class Passenger{
+    
+    public String name;
+    public String seat;
+    public String meal;
 
     public Passenger(){
         //Required for JSON deserialisation

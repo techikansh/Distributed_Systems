@@ -12,15 +12,15 @@ public class Service {
 //   @Produces({ MediaType.TEXT_XML})
   @Produces({ MediaType.APPLICATION_JSON})
   
-  public String getPassenger_S(@PathParam("name") String name) { 
+  public Passenger getPassenger_S(@PathParam("name") String name) { 
         Passenger p = RESTServer.f1.getPassenger(name);
-
         if (p != null) {
-            String objectToReturn = "Name: " + p.getName() + ", Meal: " + p.getMeal() + ", Seat: " + p.getSeat();
-            return objectToReturn;
-            // return p;
+            // String objectToReturn = "Name: " + p.getName() + ", Meal: " + p.getMeal() + ", Seat: " + p.getSeat();
+            // return objectToReturn;
+            return p;
         } else {
-            return "Passenger not found";
+            // return "Passenger not found";
+            return null;
             // throw new NotFoundException("Passenger not found!");
         }    
         

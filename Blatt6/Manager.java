@@ -5,7 +5,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.inject.Singleton;
 
-@Path("/Man")
+@Path("Man")
 @Singleton
 public class Manager{
     
@@ -22,6 +22,24 @@ public class Manager{
 //    @GET
 //    @Path("/dates/{id}")
 //    @Produces(MediaType.TEXT_XML)
+@GET
+@Path("/Flight1/{name}")
+//   @Produces(MediaType.TEXT_PLAIN)
+//   @Produces({ MediaType.TEXT_XML})
+@Produces({ MediaType.APPLICATION_JSON})
+   public Passenger getPassenger_S(@PathParam("name") String name) { 
+        Passenger p = RESTServer.f1.getPassenger(name);
+        if (p != null) {
+        // String objectToReturn = "Name: " + p.getName() + ", Meal: " + p.getMeal() + ", Seat: " + p.getSeat();
+        // return objectToReturn;
+        return p;
+        } else {
+            // return "Passenger not found";
+            throw new NotFoundException("Passenger not found!");
+        }    
+    
+    }
+
 //    public MyDate getDate(@PathParam("id") int id){
 //       for(MyDate md : dateList){
 //          if(md.id == id){

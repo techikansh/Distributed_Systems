@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/techikansh/Downloads/grizzly/**/*.jar",
+        "/Users/techikansh/Downloads/jaxrs-ri/**/*.jar"
+    ]
+}

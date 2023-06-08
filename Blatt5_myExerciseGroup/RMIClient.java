@@ -45,8 +45,14 @@ public class RMIClient {
 
             //searchClothing
             Clothing c = newWardrobe1.searchClothing("Socks", "Red");
-            System.out.println("Category & color : " + c.getCategory() + " " + c.getColor());
+            System.out.println("Category & color : " + c.getCategory() + " " + c.getColor() + ", Size: " + c.getSize());
 
+            //changing size
+            c.changeSize("L");
+            System.out.println("Category & color : " + c.getCategory() + " " + c.getColor() + ", Size: " + c.getSize());
+            c.changeSize("XL");
+            System.out.println("Category & color : " + c.getCategory() + " " + c.getColor() + ", Size: " + c.getSize());
+            
 
 
             

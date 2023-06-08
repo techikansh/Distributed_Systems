@@ -18,11 +18,7 @@ public class WardrobesImpl extends UnicastRemoteObject implements Wardrobes{
                 if(c.getCategory().equals(category) && c.getColor().equals(color)){
                     return c;
                 }
-
-                // if( category.equals(c.getCategory()) && color.equals(c.getColor()) )
-                // {
-                //     return c;
-                // }
+                
         }
         return null;
     }
